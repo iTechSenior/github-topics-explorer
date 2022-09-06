@@ -1,0 +1,42 @@
+.related-topic-badge {
+    display: flex;
+    align-items: center;
+    padding: 0.3rem 1rem;
+    margin: 0.25rem 0.25rem;
+    background-color: #12233A;
+    border-radius: 1rem;
+    transition: all ease 0.3s;
+}
+
+.related-topic-badge:hover {
+    background-color: #1F70EB;
+    cursor: pointer;
+}
+
+.related-topic-badge:hover .related-topic-name {
+    color: white;
+}
+
+.related-topic-name {
+    font-size: 0.8rem;
+    color: #58A6FF;
+    font-weight: bold;
+}
+
+.related-topic-star {
+    display: flex;
+    align-items: center;
+    margin-left: 0.5rem;
+}
+
+.related-topic-star-icon {
+    width: 0.9rem;
+    height: 0.9rem;
+}
+
+.related-topic-stargazer-count {
+    margin-left: 0.1rem;
+    font-size: 0.8rem;
+    font-weight: bold;
+    color: #FACA28;
+}
