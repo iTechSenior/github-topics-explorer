@@ -13,7 +13,11 @@ const SearchResult = ({ searchTerm, onRelatedTopicClick }) => {
                     {searchTerm}
                 </span>
             </div>
-            {error && <span className="search-error">{error.message}</span>}
+            {error && (
+                <span className="search-error">
+                    Sorry, something went wrong.
+                </span>
+            )}
             {loading && <span className="search-loading">Loading...</span>}
             {data &&
                 data.search.nodes.map((node) => (
