@@ -4,12 +4,13 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ## Installation
 
-1. yarn install
-2. yarn start
-3. Paste your `github api access token` to `.env` file.
+1. Paste your `github api access token` to `.env` file.
     - First, create a .env file in the root folder.
     - And you should create a variable called `REACT_APP_GITHUB_API_ACCESS_TOKEN` in the .env file and paste your `token` to it.
     - Don't change the variable name.
+2. yarn install
+3. yarn start
+
 
 ## Dependencies added
 
