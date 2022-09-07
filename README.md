@@ -15,6 +15,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 ## Dependencies added
 
 -   GraphQL and Apollo Client to fetch the data using Github GraphQL API.
+-   styled-components for styles
 
 ## Implementation
 
