@@ -293,7 +293,7 @@ describe("Topic", () => {
         );
 
         expect(
-            await screen.findByText("An error occurred")
+            await screen.findByText("Sorry, something went wrong.")
         ).toBeInTheDocument();
     });
 
@@ -319,6 +319,8 @@ describe("Topic", () => {
             </MockedProvider>
         );
 
-        expect(await screen.findByText("Error!")).toBeInTheDocument();
+        expect(
+            await screen.findByText("Sorry, something went wrong.")
+        ).toBeInTheDocument();
     });
 });

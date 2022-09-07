@@ -1,11 +1,22 @@
-import "./Footer.css";
+import styled from "styled-components";
+import Container from "components/Basic/Container";
+import Span from "components/Basic/Span";
+import Flex from "components/Basic/Flex";
+
+const FooterContainer = styled.div`
+    background-color: #161b22;
+    padding: 2rem;
+`;
 
 const Footer = () => {
     return (
-        <div className="footer" data-testid="data-footer">
-            <span>Frontend Test Assignment</span>
-            <span>by Chris</span>
-        </div>
+        <FooterContainer data-testid="data-footer">
+            <Container>
+                <Flex justifyContent="center" alignItems="center">
+                    <Span bold>Frontend Test Assignment by Chris</Span>
+                </Flex>
+            </Container>
+        </FooterContainer>
     );
 };
 
