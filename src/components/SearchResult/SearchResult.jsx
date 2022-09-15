@@ -27,7 +27,24 @@ const TopicTermLabel = styled.span`
 const SearchResult = ({ searchTerm, onRelatedTopicClick }) => {
     const { loading, error, data } = useGetTopics(searchTerm);
 
-    console.log("data", data);
+    const handleError = () => {
+        if (error) {
+            if (error.networkError.statusCode === 401) {
+                return (
+                    <Span fontSize={2}>
+                        {error.networkError.result.message}
+                    </Span>
+                );
+            } else {
+                return (
+                    <Span fontSize={2}>
+                        Sorry, it's not your fault. We are taking look at the
+                        issues on our side.
+                    </Span>
+                );
+            }
+        }
+    };
 
     return (
         <SearchResultContainer data-testid="data-search-result">
@@ -43,9 +60,7 @@ const SearchResult = ({ searchTerm, onRelatedTopicClick }) => {
                         {searchTerm}
                     </Span>
                 </Flex>
-                {error && (
-                    <Span fontSize={2}>Sorry, something went wrong.</Span>
-                )}
+                {handleError()}
                 {loading && <Span fontSize={2}>Loading...</Span>}
                 {data && data.search.nodes.length === 0 && (
                     <Span fontSize={2}>
