@@ -3,8 +3,12 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## ScreenShot
+![Github GraphQL Explorer (1)](https://user-images.githubusercontent.com/48595430/190450222-29b0d9ec-ab52-470c-bde3-aea90b268027.png)
+![Github GraphQL Explorer (2)](https://user-images.githubusercontent.com/48595430/190450234-b5c5d587-1bc8-489a-b0ec-1971fa8280eb.png)
+![Github GraphQL Explorer (3)](https://user-images.githubusercontent.com/48595430/190450247-b796acd3-e075-4f31-9d60-d492869f9ebe.png)
+![Github GraphQL Explorer (4)](https://user-images.githubusercontent.com/48595430/190450257-7beda1ba-418a-4b82-9eea-b4c6d3be43cd.png)
+![Github GraphQL Explorer](https://user-images.githubusercontent.com/48595430/190450267-1d8359f7-3304-4a54-bcb4-461ad5e1afa5.png)
 
-![Github GraphQL Explorer](https://user-images.githubusercontent.com/48595430/188959942-45545d49-1133-4c97-907c-d08950daadd3.png)
 
 
 ## Installation
