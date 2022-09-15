@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import styled from "styled-components";
 import Container from "components/Basic/Container";
 import Span from "components/Basic/Span";
@@ -38,7 +38,11 @@ const SearchButton = styled.button`
 `;
 
 const Header = ({ searchTerm, onSearch }) => {
-    const [inputValue, setInputValue] = useState(searchTerm);
+    const [inputValue, setInputValue] = useState("");
+
+    useEffect(() => {
+        setInputValue(searchTerm);
+    }, [searchTerm]);
 
     const handleInputChnage = (e) => {
         setInputValue(e.target.value);
