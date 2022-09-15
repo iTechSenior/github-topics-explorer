@@ -27,6 +27,8 @@ const TopicTermLabel = styled.span`
 const SearchResult = ({ searchTerm, onRelatedTopicClick }) => {
     const { loading, error, data } = useGetTopics(searchTerm);
 
+    console.log("data", data);
+
     return (
         <SearchResultContainer data-testid="data-search-result">
             <Container>
@@ -45,7 +47,13 @@ const SearchResult = ({ searchTerm, onRelatedTopicClick }) => {
                     <Span fontSize={2}>Sorry, something went wrong.</Span>
                 )}
                 {loading && <Span fontSize={2}>Loading...</Span>}
+                {data && data.search.nodes.length === 0 && (
+                    <Span fontSize={2}>
+                        Looks like there is no result what you are looking for.
+                    </Span>
+                )}
                 {data &&
+                    data.search.nodes.length > 0 &&
                     data.search.nodes.map((node) => (
                         <Topic
                             key={node.id}
