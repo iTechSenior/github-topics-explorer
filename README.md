@@ -2,6 +2,11 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+## ScreenShot
+
+![Github GraphQL Explorer](https://user-images.githubusercontent.com/48595430/188959942-45545d49-1133-4c97-907c-d08950daadd3.png)
+
+
 ## Installation
 
 1. Paste your `github api access token` to `.env` file.
@@ -15,6 +20,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 ## Dependencies added
 
 -   GraphQL and Apollo Client to fetch the data using Github GraphQL API.
+-   styled-components for styles
 
 ## Implementation
 
