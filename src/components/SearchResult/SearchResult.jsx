@@ -29,17 +29,17 @@ const SearchResult = ({ searchTerm, onRelatedTopicClick }) => {
 
     const handleError = () => {
         if (error) {
-            if (error.networkError.statusCode === 401) {
+            if (error.networkError && error.networkError.statusCode === 401) {
                 return (
                     <Span fontSize={2}>
-                        {error.networkError.result.message}
+                        Sorry, you need to be authenticated.
                     </Span>
                 );
             } else {
                 return (
                     <Span fontSize={2}>
-                        Sorry, it's not your fault. We are taking look at the
-                        issues on our side.
+                        Sorry, something wrong happened unexpectedly. Please try
+                        again later.
                     </Span>
                 );
             }
@@ -62,14 +62,14 @@ const SearchResult = ({ searchTerm, onRelatedTopicClick }) => {
                 </Flex>
                 {handleError()}
                 {loading && <Span fontSize={2}>Loading...</Span>}
-                {data && data.search.nodes.length === 0 && (
+                {data && data.topic.relatedTopics.length === 0 && (
                     <Span fontSize={2}>
                         Looks like there is no result what you are looking for.
                     </Span>
                 )}
                 {data &&
-                    data.search.nodes.length > 0 &&
-                    data.search.nodes.map((node) => (
+                    data.topic.relatedTopics.length > 0 &&
+                    data.topic.relatedTopics.map((node) => (
                         <Topic
                             key={node.id}
                             topic={node}

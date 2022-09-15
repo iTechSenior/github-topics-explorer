@@ -23,11 +23,7 @@ const TopicContainer = styled.div`
 `;
 
 const Topic = ({ topic, onRelatedTopicClick }) => {
-    const {
-        resourcePath,
-        stargazerCount,
-        repositoryTopics: { nodes },
-    } = topic;
+    const { name, stargazerCount, relatedTopics } = topic;
 
     return (
         <TopicContainer data-testid="data-topic">
@@ -38,7 +34,7 @@ const Topic = ({ topic, onRelatedTopicClick }) => {
                 flexWrap="wrap"
             >
                 <Span fontSize={"1.5"} color={"#58a6ff"} fontWeight={"500"}>
-                    {resourcePath}
+                    {name}
                 </Span>
                 <Flex alignItems="center">
                     <Image
@@ -59,11 +55,11 @@ const Topic = ({ topic, onRelatedTopicClick }) => {
             </Flex>
 
             <Flex flexWrap="wrap" alignItems="center">
-                {nodes.length > 0 &&
-                    nodes.map((node) => (
+                {relatedTopics.length > 0 &&
+                    relatedTopics.map((node) => (
                         <RelatedTopicBadge
                             key={node.id}
-                            topic={node.topic}
+                            topic={node}
                             onClick={onRelatedTopicClick}
                         />
                     ))}
